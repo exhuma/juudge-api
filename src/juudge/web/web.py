@@ -4,12 +4,20 @@ from typing import Annotated
 from fastapi import Body, Depends, FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, RedirectResponse
+from gouge.colourcli import Simple
+from gouge.preformatters import uvicorn_access
 from langchain_postgres import PGVector
 
 from juudge.assistant import create_chain, query
 from juudge.data import load_atomic, load_core_rules
 from juudge.web.dependencies import get_store
 from juudge.web.model import QueryResponse
+
+
+class LogFormatter(Simple):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, show_exc=True, **kwargs)
+        self.pre_formatters["uvicorn.access"] = [uvicorn_access]
 
 
 def create_app():
