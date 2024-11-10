@@ -1,0 +1,6 @@
+---
+version: '0.2'
+dictionaryDefinitions:
+  - name: project
+    path: ./cspell/project.txt
+dictionaries: [project, en-gb, softwareTerms, python]

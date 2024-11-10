@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "juudge"
+authors = [{name = "Michel Albert", email = "michel@albert.lu"}]
+description = "An AI Assistant for Magic: The Gathering"
+readme = "README.rst"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+classifiers = ["Framework :: FastAPI", "Programming Language :: Python :: 3"]
+dependencies = [
+  "langchain",
+  "langchain-openai",
+  "langchain-core",
+  "langgraph>0.2.27",
+  "langchain_community",
+  "jq",
+  "langchain_postgres",
+  "langchain-text-splitters"
+]
+version = "2024.11.10-alpha.1"
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+profile = "black"
+line_length = 80
