@@ -34,11 +34,6 @@ repos:
     rev: v0.23.1
     hooks:
       - id: toml-sort-fix
-  - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v0.20.0
-    hooks:
-      - id: stylua
-        args: [--config-path, src/flightlogs/vendor/binaries/stylua.toml]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.7.2
     hooks:
