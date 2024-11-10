@@ -13,12 +13,7 @@ classifiers = ["Framework :: FastAPI", "Programming Language :: Python :: 3"]
 dependencies = [
   "langchain",
   "langchain-openai",
-  "langchain-core",
-  "langgraph>0.2.27",
-  "langchain_community",
-  "jq",
-  "langchain_postgres",
-  "langchain-text-splitters"
+  "langchain-postgres"
 ]
 version = "2024.11.10-alpha.1"
 
