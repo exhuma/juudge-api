@@ -96,22 +96,32 @@ def split_rules(filename: Path) -> Generator[Document, None, None]:
                 )
             elif state == "Glossary":
                 first_line, _, rest = doc.partition("\n")
+                metadata: MyMetadata = {
+                    "source": str(filename),
+                    "type": "glossary",
+                    "section": state,
+                    "identifiers": None,
+                    "rulings": [],
+                    "name": "",
+                    "original_text": "",
+                }
                 yield Document(
                     page_content=f'"{first_line}": {rest}',
-                    metadata={
-                        "source": filename,
-                        "type": "glossary",
-                        "section": state,
-                    },
+                    metadata=metadata,
                 )
             else:
+                metadata: MyMetadata = {
+                    "source": str(filename),
+                    "type": "other",
+                    "section": state,
+                    "name": "",
+                    "original_text": "",
+                    "identifiers": None,
+                    "rulings": [],
+                }
                 yield Document(
                     page_content=doc,
-                    metadata={
-                        "source": filename,
-                        "type": "other",
-                        "section": state,
-                    },
+                    metadata=metadata,
                 )
 
 

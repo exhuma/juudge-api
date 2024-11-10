@@ -16,5 +16,5 @@ class MyMetadata(TypedDict):
     identifiers: Identifiers | None
     source: str
     rulings: list[Ruling]
-    type: Literal["core-rule", "card-text"]
+    type: Literal["core-rule", "card-text", "glossary", "other"]
     section: str
