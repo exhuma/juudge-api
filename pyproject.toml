@@ -11,9 +11,13 @@ requires-python = ">=3.12"
 license = {text = "MIT"}
 classifiers = ["Framework :: FastAPI", "Programming Language :: Python :: 3"]
 dependencies = [
+  "fastapi",
   "langchain",
   "langchain-openai",
-  "langchain-postgres"
+  "langchain-postgres",
+  "pydantic-settings",
+  "python-multipart",
+  "uvicorn"
 ]
 version = "2024.11.10-alpha.1"
 

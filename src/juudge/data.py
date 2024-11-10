@@ -15,14 +15,14 @@ P_SECTION = re.compile(r"^\d{,3}\. (.*?)$")
 LOG = logging.getLogger(__name__)
 
 
-def load_atomic(file_path: str) -> Generator[Document, None, None]:
+def split_atomic(file_path: Path) -> Generator[Document, None, None]:
     """
     Load card information from the MTGJson "Atomic" file format.
 
     See https://mtgjson.com/data-models/card/card-atomic/
     Download link: https://mtgjson.com/api/v5/AtomicCards.json.gz
     """
-    with open(file_path) as f:
+    with file_path.open() as f:
         data = json.load(f)
         items = data["data"].items()
         num_items = len(items)
@@ -55,6 +55,12 @@ def load_atomic(file_path: str) -> Generator[Document, None, None]:
                 )
                 LOG.debug(f"Loaded {i+1}/{num_items} cards")
                 yield doc
+
+
+def load_atomic(store: PGVector, filename: Path):
+    for batch in batched(split_atomic(filename), 100):
+        store.add_documents(list(batch))
+        LOG.debug(f"Loaded {len(batch)} documents into the database")
 
 
 def load_core_rules(store: PGVector, filename: Path):
@@ -127,8 +133,6 @@ def split_rules(filename: Path) -> Generator[Document, None, None]:
 
 def load_all(vectorstore: PGVector):
     LOG.debug("loading")
-    for batch in batched(load_atomic("./data/atomic.json"), 100):
-        vectorstore.add_documents(list(batch))
-        LOG.debug(f"Loaded {len(batch)} documents into the database")
+    load_atomic(vectorstore, Path("./data/atomic.json"))
     load_core_rules(vectorstore, Path("data/MagicCompRules 20241108.txt"))
     LOG.debug("done loading")
