@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import Annotated
 
 import jwt
@@ -69,7 +68,7 @@ def create_app():
             return JSONResponse(
                 content={"status": "error", "message": "Missing filename"}
             )
-        load_atomic(store, Path(file.filename))
+        load_atomic(store, file.file, file.filename)
         return JSONResponse(content={"status": "ok"})
 
     @app.post("/upload/rules")
@@ -83,7 +82,7 @@ def create_app():
             return JSONResponse(
                 content={"status": "error", "message": "Missing filename"}
             )
-        load_core_rules(store, Path(file.filename))
+        load_core_rules(store, file.file, file.filename)
         return JSONResponse(content={"status": "ok"})
 
     @app.post("/query")
