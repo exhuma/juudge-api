@@ -59,8 +59,7 @@ def split_atomic(
 
 def load_atomic(store: PGVector, file: BinaryIO, filename: str):
     for batch in batched(split_atomic(file, filename), 100):
-        # store.add_documents(list(batch))
-        print(batch)
+        store.add_documents(list(batch))
         LOG.debug(f"Loaded {len(batch)} documents into the database")
 
 
