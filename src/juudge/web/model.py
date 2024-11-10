@@ -65,3 +65,8 @@ class QueryResponse(BaseModel):
                 for ctx in response["context"]
             ],
         )
+
+
+class BasicCredentials(BaseModel):
+    username: str
+    password: str
