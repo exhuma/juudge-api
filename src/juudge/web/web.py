@@ -1,15 +1,9 @@
-# Simple FastAPI web server for the Juudge project
-# It provides API endpoints to...
-#
-#   - Upload a JSON file in "atomic" format
-#   - Upload a text file with the Magic: The Gathering rules
-#   - ask a question about a card or a rule
-
-
 from pathlib import Path
+from typing import Annotated
 
-from fastapi import Depends, FastAPI, File, UploadFile
-from fastapi.responses import JSONResponse
+from fastapi import Body, Depends, FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse, RedirectResponse
 from langchain_postgres import PGVector
 
 from juudge.assistant import create_chain, query
@@ -20,12 +14,31 @@ from juudge.web.model import QueryResponse
 
 def create_app():
 
-    app = FastAPI()
+    app = FastAPI(
+        title="Juudge",
+        description="A web API to query Magic: The Gathering rules",
+        version="0.1.0",
+    )
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+
+    @app.get("/", include_in_schema=False)
+    async def redirect_to_docs():
+        return RedirectResponse(url="/docs")
 
     @app.post("/upload/atomic")
     async def upload_atomic(
         file: UploadFile = File(...), store: PGVector = Depends(get_store)
     ):
+        """
+        Upload an MTGJson "Atomic" file to the database.
+        """
         if file.filename is None:
             return JSONResponse(
                 content={"status": "error", "message": "Missing filename"}
@@ -37,6 +50,7 @@ def create_app():
     async def upload_rules(
         file: UploadFile = File(...), store: PGVector = Depends(get_store)
     ):
+        "Upload a core rules file to the database."
         if file.filename is None:
             return JSONResponse(
                 content={"status": "error", "message": "Missing filename"}
@@ -46,8 +60,14 @@ def create_app():
 
     @app.post("/query")
     async def query_endpoint(
-        question: str, store: PGVector = Depends(get_store)
+        question: Annotated[str, Body(media_type="text/plain")],
+        store: PGVector = Depends(get_store),
     ) -> QueryResponse:
+        """
+        Send a question to the assistant and get a response.
+
+        The question should be a plain string.
+        """
         chain = create_chain(store)
         response = query(chain, question)
         return QueryResponse.from_langchain_response(question, response)
