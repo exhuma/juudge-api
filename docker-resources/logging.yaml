@@ -1,0 +1,56 @@
+---
+# This file contains the default configuration for application logging. Refer to
+# the logging documentation[1] for a tutorial and reference for this file.
+#
+# The default config writes colored (via "gouge") output to stdout and a default
+# "access-log" to /opt/flightlogs/logs/access.log. The access-log is
+# auto-rotating to ensure constant disk-space usage.
+#
+# [1]: https://docs.python.org/3/library/logging.html#module-logging
+
+# The "version" of the schema for the logging config
+version: 1
+# The root logger writes to the console and includes even the fines log-messages
+root:
+  level: DEBUG
+  handlers: [console]
+loggers:
+  # The "uvicorn" (embedded web-server) logger propagates all messages
+  uvicorn:
+    level: DEBUG
+  # The "uvicorn.access" logger propagates only messages of severity "INFO" and
+  # up. It writes those messages into the access-log before propagating.
+  uvicorn.access:
+    handlers:
+      - access_log
+  # The "httpx" logger propagates only messages of severity "WARNING" and up
+  httpx:
+    level: WARNING
+  # The "httpcore" logger propagates only messages of severity "WARNING" and up
+  httpcore:
+    level: WARNING
+  auth:
+    level: DEBUG
+  flightlogs:
+    level: DEBUG
+  multipart:
+    level: WARNING
+handlers:
+  # Console output uses the "gouge" formatter for colored output, writes to
+  # stdout and includes all messages (including DEBUG) if they were not already
+  # filtered out by a logger.
+  console:
+    class: logging.StreamHandler
+    formatter: gouge
+    level: DEBUG
+    stream: ext://sys.stdout
+  # The access-log keeps up to 7 rotated files of up to 50MB of data each
+  access_log:
+    class: logging.handlers.RotatingFileHandler
+    filename: /opt/flightlogs/logs/access.log
+    maxBytes: 51200000
+    backupCount: 7
+formatters:
+  # The "gouge" formatter delegated formatting to the "gouge" library
+  gouge:
+    class: flightlogs.main.LogFormatter
