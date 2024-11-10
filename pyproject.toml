@@ -12,6 +12,7 @@ license = {text = "MIT"}
 classifiers = ["Framework :: FastAPI", "Programming Language :: Python :: 3"]
 dependencies = [
   "fastapi",
+  "gouge",
   "langchain",
   "langchain-openai",
   "langchain-postgres",
