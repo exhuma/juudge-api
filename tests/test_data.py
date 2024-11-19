@@ -3,9 +3,25 @@ from unittest.mock import Mock
 
 from langchain_postgres import PGVector
 
-from juudge.data import load_atomic, load_core_rules, split_atomic, split_rules
+from juudge.data import (
+    load_atomic,
+    load_core_rules,
+    split_atomic,
+    split_detailed_set,
+    split_rules,
+)
 
 HERE = Path(__file__).parent
+
+
+def test_split_detailed_set():
+    test_file = HERE / "data" / "detailed-set.json"
+    with test_file.open("rb") as file:
+        documents = list(split_detailed_set(file, file.name))
+    assert len(documents) == 1
+    assert documents[0].page_content == (
+        "Test Card-Text\nSecondLine\n\nRulings:\n2024-11-19: Test Ruling"
+    )
 
 
 def test_split_atomic():

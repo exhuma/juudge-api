@@ -1,0 +1,130 @@
+{
+    "meta": {
+        "date": "2024-11-19",
+        "version": "5.2.2+20241119"
+    },
+    "data": {
+        "baseSetSize": 291,
+        "cards": [
+            {
+                "artist": "Lius Lasahido",
+                "artistIds": [
+                    "0a0e9093-ce44-4a69-93a7-09b63e7c330d"
+                ],
+                "availability": [
+                    "arena",
+                    "mtgo",
+                    "paper"
+                ],
+                "boosterTypes": [
+                    "default"
+                ],
+                "borderColor": "black",
+                "colorIdentity": [],
+                "colors": [],
+                "convertedManaCost": 7,
+                "edhrecRank": 14659,
+                "finishes": [
+                    "nonfoil",
+                    "foil"
+                ],
+                "flavorText": "Born of the infinite void between realities, the Eldrazi have one goal: to consume.",
+                "foreignData": [],
+                "frameVersion": "2015",
+                "hasFoil": true,
+                "hasNonFoil": true,
+                "identifiers": {
+                    "cardKingdomFoilId": "306696",
+                    "cardKingdomId": "305609",
+                    "mcmId": "796513",
+                    "mtgArenaId": "93714",
+                    "mtgjsonV4Id": "294b1769-df98-5221-8f5d-b3f53803b785",
+                    "mtgoId": "133570",
+                    "multiverseId": "679078",
+                    "scryfallCardBackId": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+                    "scryfallId": "8d8432a7-1c8a-4cfb-947c-ecf9791063eb",
+                    "scryfallIllustrationId": "00f2c4ad-1a32-489b-8a30-c87e29914f69",
+                    "scryfallOracleId": "a15547d0-bbcb-41ee-a9ae-8325a9e7fe1f",
+                    "tcgplayerProductId": "591199"
+                },
+                "keywords": [
+                    "First strike",
+                    "Lifelink",
+                    "Menace",
+                    "Reach",
+                    "Trample",
+                    "Vigilance",
+                    "Ward"
+                ],
+                "language": "English",
+                "layout": "normal",
+                "legalities": {
+                    "alchemy": "Legal",
+                    "brawl": "Legal",
+                    "commander": "Legal",
+                    "duel": "Legal",
+                    "explorer": "Legal",
+                    "future": "Legal",
+                    "gladiator": "Legal",
+                    "historic": "Legal",
+                    "legacy": "Legal",
+                    "modern": "Legal",
+                    "oathbreaker": "Legal",
+                    "pioneer": "Legal",
+                    "standard": "Legal",
+                    "standardbrawl": "Legal",
+                    "timeless": "Legal",
+                    "vintage": "Legal"
+                },
+                "manaCost": "{7}",
+                "manaValue": 7,
+                "name": "Sire of Seven Deaths",
+                "number": "1",
+                "originalText": "First strike, vigilance\nMenace, trample\nReach, lifelink\nWard—\nPay 7 life.",
+                "originalType": "Creature — Eldrazi",
+                "power": "7",
+                "printings": [
+                    "FDN",
+                    "PFDN"
+                ],
+                "purchaseUrls": {
+                    "cardKingdom": "https://mtgjson.com/links/341d517b3434219f",
+                    "cardKingdomFoil": "https://mtgjson.com/links/c67f2337c1b683a2",
+                    "tcgplayer": "https://mtgjson.com/links/146a4117782ce2f0"
+                },
+                "rarity": "mythic",
+                "rulings": [
+                    {
+                        "date": "2024-11-19",
+                        "text": "Test Ruling"
+                    }
+                ],
+                "securityStamp": "oval",
+                "setCode": "FDN",
+                "sourceProducts": {
+                    "foil": [
+                        "0989bd17-4aad-56af-aca7-dee635bb50ed"
+                    ],
+                    "nonfoil": [
+                        "0989bd17-4aad-56af-aca7-dee635bb50ed"
+                    ]
+                },
+                "subtypes": [
+                    "Eldrazi"
+                ],
+                "supertypes": [],
+                "text": "Test Card-Text\nSecondLine",
+                "toughness": "7",
+                "type": "Creature — Eldrazi",
+                "types": [
+                    "Creature"
+                ],
+                "uuid": "46149862-416f-563b-b854-1893b7c76d6a",
+                "variations": [
+                    "81ccfd9c-846f-56c8-9cc7-0068d1312a5d",
+                    "39752ddb-d0e0-5712-8aad-2996b5acda2e"
+                ]
+            }
+        ]
+    }
+}
