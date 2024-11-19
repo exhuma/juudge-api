@@ -101,7 +101,7 @@ def split_rules(
                 metadata=metadata,
             )
         elif state == "Glossary":
-            first_line, _, rest = doc.partition("\n")
+            first_line, _, rest = doc.partition("\r\n")
             metadata: MyMetadata = {
                 "source": filename,
                 "type": "glossary",
