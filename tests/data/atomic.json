@@ -1,0 +1,145 @@
+{
+    "meta": {
+        "date": "2024-11-09",
+        "version": "5.2.2+20241109"
+    },
+    "data": {
+        "empty-text": [
+            {
+                "text": ""
+            }
+        ],
+        "Counterspell": [
+            {
+                "colorIdentity": [
+                    "U"
+                ],
+                "colors": [
+                    "U"
+                ],
+                "convertedManaCost": 2,
+                "edhrecRank": 17,
+                "edhrecSaltiness": 0.89,
+                "firstPrinting": "LEA",
+                "foreignData": [
+                    {
+                        "language": "Japanese",
+                        "name": "対抗呪文",
+                        "text": "呪文１つを対象とし、それを打ち消す。",
+                        "type": "インスタント"
+                    },
+                    {
+                        "language": "Chinese Simplified",
+                        "name": "反击咒语",
+                        "text": "反击目标咒语。",
+                        "type": "瞬间"
+                    }
+                ],
+                "identifiers": {
+                    "scryfallOracleId": "cc187110-1148-4090-bbb8-e205694a39f5"
+                },
+                "layout": "normal",
+                "legalities": {
+                    "brawl": "Legal",
+                    "commander": "Legal",
+                    "duel": "Legal",
+                    "gladiator": "Legal",
+                    "historic": "Banned",
+                    "legacy": "Legal",
+                    "modern": "Legal",
+                    "oathbreaker": "Legal",
+                    "pauper": "Legal",
+                    "paupercommander": "Legal",
+                    "predh": "Legal",
+                    "premodern": "Legal",
+                    "timeless": "Legal",
+                    "vintage": "Legal"
+                },
+                "manaCost": "{U}{U}",
+                "manaValue": 2,
+                "name": "Counterspell",
+                "printings": [
+                    "2ED",
+                    "30A",
+                    "3ED"
+                ],
+                "purchaseUrls": {
+                    "cardKingdomFoil": "https://mtgjson.com/links/24d31b01ba3095df",
+                    "tcgplayer": "https://mtgjson.com/links/d7da119eeedc8e15"
+                },
+                "subtypes": [],
+                "supertypes": [],
+                "text": "Counter target spell.",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ]
+            }
+        ],
+        "Countersquall": [
+            {
+                "colorIdentity": [
+                    "B",
+                    "U"
+                ],
+                "colors": [
+                    "B",
+                    "U"
+                ],
+                "convertedManaCost": 2,
+                "edhrecRank": 2740,
+                "edhrecSaltiness": 0.35,
+                "firstPrinting": "CON",
+                "foreignData": [
+                    {
+                        "flavorText": "エスパーの二十三の風には名が与えられ、記録にとどめられ、魔法の流れとあらゆる関わ",
+                        "language": "Japanese",
+                        "name": "対抗突風",
+                        "text": "クリーチャーでない呪文１つを対象とし、それを打ち消す。それのコントローラーは２点のライ",
+                        "type": "インスタント"
+                    }
+                ],
+                "identifiers": {
+                    "scryfallOracleId": "6df620b8-1e54-4f63-8556-12c75e5679af"
+                },
+                "layout": "normal",
+                "legalities": {
+                    "commander": "Legal",
+                    "duel": "Legal",
+                    "legacy": "Legal",
+                    "modern": "Legal",
+                    "oathbreaker": "Legal",
+                    "penny": "Legal",
+                    "predh": "Legal",
+                    "vintage": "Legal"
+                },
+                "manaCost": "{U}{B}",
+                "manaValue": 2,
+                "name": "Countersquall",
+                "printings": [
+                    "CON",
+                    "DDH",
+                    "PLST",
+                    "UMA"
+                ],
+                "purchaseUrls": {
+                    "cardKingdom": "https://mtgjson.com/links/1f9836ef3064811c",
+                    "tcgplayer": "https://mtgjson.com/links/60393c6788226db3"
+                },
+                "rulings": [
+                    {
+                        "date": "2018-12-07",
+                        "text": "Test ruling."
+                    }
+                ],
+                "subtypes": [],
+                "supertypes": [],
+                "text": "Counter target noncreature spell. Its controller loses 2 life.",
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ]
+            }
+        ]
+    }
+}

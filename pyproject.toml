@@ -24,6 +24,12 @@ dependencies = [
 ]
 version = "2024.11.10-alpha.1"
 
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-coverage"
+]
+
 [tool.black]
 line-length = 80
 

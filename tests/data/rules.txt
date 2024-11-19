@@ -1,0 +1,117 @@
+Magic: The Gathering Comprehensive Rules
+
+These rules are effective as of November 8, 2024.
+
+Introduction
+
+This document is the ultimate authority for Magic: The Gathering® competitive game play. It consists of a series of numbered rules followed by a glossary. Many of the numbered rules are divided into subrules, and each separate rule and subrule of the game has its own number. (Note that subrules skip the letters “l” and “o” due to potential confusion with the numbers “1” and “0”; subrule 704.5k is followed by 704.5m, then 704.5n, then 704.5p, for example.)
+
+Changes may have been made to this document since its publication. You can download the most recent version from the Magic rules website at Magic.Wizards.com/Rules.
+
+Contents
+
+1. Game Concepts
+100. General
+101. The Magic Golden Rules
+
+2. Parts of a Card
+200. General
+
+3. Card Types
+300. General
+
+4. Zones
+400. General
+401. Library
+402. Hand
+
+5. Turn Structure
+500. General
+501. Beginning Phase
+
+6. Spells, Abilities, and Effects
+600. General
+601. Casting Spells
+
+7. Additional Rules
+700. General
+701. Keyword Actions
+
+8. Multiplayer Rules
+800. General
+801. Limited Range of Influence Option
+
+9. Casual Variants
+900. General
+
+Glossary
+
+Credits
+
+1. Game Concepts
+
+100. General
+
+100.1. These Magic rules apply to any Magic game with two or more players, including two-player games and multiplayer games.
+
+100.1a A two-player game is a game that begins with only two players.
+
+100.1b A multiplayer game is a game that begins with more than two players. See section 8, “Multiplayer Rules.”
+
+100.2. To play, each player needs their own deck of traditional Magic cards, small items to represent any tokens and counters, and some way to clearly track life totals.
+
+905.5. The owner of a conspiracy card is the player who put it into the command zone at the start of the game. The controller of a conspiracy card is its owner.
+
+905.6. Once the starting player has been determined, each player sets their life total to 20 and draws a hand of seven cards.
+
+Glossary
+
+Abandon
+To turn a face-up ongoing scheme card face down and put it on the bottom of its owner’s scheme deck. See rule 701.26, “Abandon.”
+
+Ability
+1. Text on an object that explains what that object does or can do.
+2. An activated or triggered ability on the stack. This kind of ability is an object.
+See rule 113, “Abilities,” and section 6, “Spells, Abilities, and Effects.”
+
+Ability Word
+An italicized word with no rules meaning that ties together abilities on different cards that have similar functionality. See rule 207.2c.
+
+Absorb
+A keyword ability that prevents damage. See rule 702.64, “Absorb.”
+
+Zone-Change Triggers
+Trigger events that involve objects changing zones. See rule 603.6.
+
+
+Credits
+
+Magic: The Gathering Original Game Design: Richard Garfield
+Comprehensive Rules Design and Development: Paul Barclay, Mark L. Gottlieb, Beth Moursund, Bill Rose, Eli Shiffrin, and Matt Tabak, with contributions from Charlie Cátinò, John Carter, Elaine Chase, Laurie Cheers, Stephen D’Angelo, Dave DeLaney, Brady Dommermuth, Mike Donais, Skaff Elias, Mike Elliott, Richard Garfield, Dan Gray, Robert Gutschera, Collin Jackson, William Jockusch, Jeff Jordan, Yonemura Kaoru, Russell Linnemann, Jim Lin, Steve Lord, Sheldon Menery, Michael Phoenix, Mark Rosewater, David Sachs, Lee Sharpe, Henry Stern, Donald X. Vaccarino, Thijs van Ommen, Ingo Warnke, Tom Wylie, and Bryan Zembruski
+Editing: Del Laugel (principal), Matt Tabak (principal), Nat Moes, Samantha Phelan, Michael Zhang, and Hans Ziegler
+Magic Rules Management: Jess Dunks, Eric Levine, and Eliana Rabinowitz
+
+The Magic: The Gathering game was designed by Richard Garfield, with contributions from Charlie Cátinò, Skaff Elias, Don Felice, Tom Fontaine, Jim Lin, Joel Mick, Chris Page, Dave Pettey, Barry “Bit” Reich, Bill Rose, and Elliott Segal. The mana symbols were designed by Christopher Rush.
+
+Thanks to all our project team members and the many others too numerous to mention who have contributed to this product.
+
+
+
+
+
+
+
+
+
+
+
+
+These rules are effective as of November 8, 2024.
+
+Published by Wizards of the Coast LLC, PO Box 707, Renton, WA 98057-0707, USA. Wizards of the Coast, Magic: The Gathering, Magic, their respective logos, Mirrodin, Kamigawa, Lorwyn, Zendikar, Innistrad, Ravnica, Khans of Tarkir, Magic Origins, Magic: The Gathering—Conspiracy, Ixalan, Unfinity, Dominaria, Ikoria, Kaldheim, Baldur’s Gate, The Brothers’ War, and Planeswalker Decks are trademarks of Wizards of the Coast LLC in the USA and other countries. ©2024 Wizards. U.S. Pat. No. RE 37,957.
+
+Astartes, C’tan, Custodes, Necron, Primarch, and Tyranid ® & © Games Workshop Limited 2022. All Rights Reserved.
+
+© 2023 Middle-earth Enterprises. Tales of Middle-earth and The Lord of the Rings and the names of the characters, events, items and places therein, are trademarks of Middle-earth Enterprises, LLC used under license by Wizards of the Coast LLC. All rights reserved.
+
+BBC, DOCTOR WHO, TARDIS, DALEK, CYBERMAN and K-9 (word marks and devices) are trade marks of the British Broadcasting Corporation and are used under licence. BBC logo © BBC 1996.
