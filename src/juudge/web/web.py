@@ -9,7 +9,7 @@ from gouge.preformatters import uvicorn_access
 from langchain_postgres import PGVector
 
 from juudge.assistant import create_chain, query
-from juudge.data import load_atomic, load_core_rules
+from juudge.data import load_atomic, load_core_rules, load_detailed_set
 from juudge.web.dependencies import get_settings, get_store, valid_token
 from juudge.web.model import BasicCredentials, QueryResponse
 from juudge.web.settings import Settings
@@ -69,6 +69,22 @@ def create_app():
                 content={"status": "error", "message": "Missing filename"}
             )
         load_atomic(store, file.file, file.filename)
+        return JSONResponse(content={"status": "ok"})
+
+    @app.post("/upload/detailed-set")
+    async def upload_detailed_set(
+        file: UploadFile = File(...),
+        store: PGVector = Depends(get_store),
+        token: dict[str, str] = Depends(valid_token),
+    ):
+        """
+        Upload an MTGJson "detailed" file to the database.
+        """
+        if file.filename is None:
+            return JSONResponse(
+                content={"status": "error", "message": "Missing filename"}
+            )
+        load_detailed_set(store, file.file, file.filename)
         return JSONResponse(content={"status": "ok"})
 
     @app.post("/upload/rules")
